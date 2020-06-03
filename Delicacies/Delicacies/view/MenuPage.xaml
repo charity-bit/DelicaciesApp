@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+            xmlns:vm="clr-namespace:Delicacies.ViewModel"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="Delicacies.view.MenuPage"
+             NavigationPage.HasNavigationBar="False">
+
+  
+
+
+    <ContentPage.BindingContext>
+        <vm:MenuPageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="220" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="144" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            
+            <cv:CarouselViewControl  Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0" 
+                x:Name="ItemBanner" HeightRequest="220" ItemsSource="{Binding GetBanner}"
+                                    HorizontalOptions="FillAndExpand" AnimateTransition="True"
+                                    VerticalOptions="StartAndExpand" WidthRequest="144"
+                                    ShowIndicators="False" InterPageSpacing="0" >
+                
+                
+                
+                <cv:CarouselViewControl.ItemTemplate>
+                    <DataTemplate >
+                        <Image Source="{Binding Image}"  Aspect="AspectFill"/>
+                    </DataTemplate>
+                </cv:CarouselViewControl.ItemTemplate>
+            </cv:CarouselViewControl>
+            <BoxView BackgroundColor="{StaticResource Black}" HorizontalOptions="Start" VerticalOptions="Start"
+                     HeightRequest="32" WidthRequest="112" Grid.Row="0"
+                     Grid.Column="0"/>
+            <Label Text="DELICARS" FontSize="20" TextColor="{StaticResource White}"
+                           VerticalOptions="Start" HorizontalOptions="Start" Grid.Column="0" />
+            <Label Text="Delicars" Grid.Column="1" VerticalOptions="Start" Margin="0,48,32,0"
+                   FontSize="20" HorizontalOptions="Center" TextColor="{StaticResource Black}" />
+            <Label Text="We are All About Delish!!!" Grid.Column="1" VerticalOptions="Center" Margin="0,0,2,0"
+                   FontSize="20" HorizontalOptions="Center" 
+                   TextColor="{StaticResource Black}" />
+            <BoxView BackgroundColor="{StaticResource AccentColor}" 
+                     Grid.ColumnSpan="2" Grid.Row="1"  x:Name="deliBox"
+                     HeightRequest="42" WidthRequest="282" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,-21,0,0"/>
+            <Label Text="OUR DELICIOUS MENU" FontSize="20" HeightRequest="27" WidthRequest="233" Grid.Row="1" 
+                      HorizontalOptions="Center" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Start" Margin="0,-13,0,0"
+                   TextColor="{StaticResource White}"/>
+            
+                        <Label Text="MENU" FontSize="14" FontAttributes="Bold"  Grid.Row="1" Grid.Column="1"
+                       HorizontalOptions="Center" VerticalOptions="Start" Margin="0,30,0,0" 
+                       TextColor="{StaticResource Black}"/>
+            <ScrollView Grid.Column="1" Grid.Row="1" HorizontalOptions="StartAndExpand" Margin="0,60,0,0"
+                           VerticalOptions="Start" VerticalScrollBarVisibility="Never">
+                
+                  
+            <CollectionView      HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"
+                                     ItemsSource="{Binding GetItems}" 
+                               >
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="20" />
+                    </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate >
+                    <DataTemplate>
+                        <Grid ColumnSpacing="5" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="72" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="{Binding Image}" Grid.Column="0"
+                                    HorizontalOptions="Start"  HeightRequest="72" WidthRequest="72" Aspect="AspectFill"
+                                   VerticalOptions="Start" 
+                                        />
+                                <StackLayout Grid.Column="1" >
+                                    <Label Text="{Binding Name}" FontSize="15" HorizontalOptions="Start" VerticalOptions="Start" 
+                                       FontAttributes="Bold" TextColor="{StaticResource AccentColor}" />
+
+
+                                    <Label Text="{Binding Description}" FontSize="15" TextColor="{StaticResource Black}" WidthRequest="135" 
+                                        HeightRequest="51" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+
+                                    <Label  Text="{Binding Price,StringFormat='{0:C}'}" FontSize="15"
+                                           VerticalOptions="End"   HorizontalOptions="End" TextColor="{StaticResource Black}" />
+
+                                    <Button CornerRadius="10" WidthRequest="60" HeightRequest="31"  
+                                         Text="ORDER" FontSize="10" 
+                                         BackgroundColor="{StaticResource AccentColor}"   
+                                          TextColor="{StaticResource Black}" />
+                                    
+
+
+                                </StackLayout>
+
+                            </Grid> 
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+
+            </CollectionView>
+            </ScrollView>
+            <StackLayout Grid.Row="1" Margin="5,40,5,0" Spacing="20" VerticalOptions="StartAndExpand">
+                <Label  Text="About Our" TextColor="{StaticResource Black}" FontSize="15"/>
+
+                <Label Text="Restaurant"  TextColor="{StaticResource AccentColor}" Margin="0,-20,0,0"
+                     FontSize="15" />
+                <Label Text= "Founded in 1998. We are Committed to serve you the best way we can" 
+                  TextColor="{StaticResource Black}" FontSize="15" />
+                <BoxView VerticalOptions="Center" HorizontalOptions="StartAndExpand" 
+                         BackgroundColor="{StaticResource AccentColor}" WidthRequest="134" 
+                          HeightRequest="24"  Margin="0,20,0,0"/>
+                <Label Text="TODAY'S SPECIAL" FontSize="15" VerticalOptions="Center"
+                       HorizontalOptions="Center" Margin="0,-42,0,0" FontAttributes="Bold"
+                       TextColor="{StaticResource Black}" />
+                <CarouselView ItemsSource="{Binding GetSpecials}" HeightRequest="200">
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="0" />
+                    </CarouselView.ItemsLayout>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+
+                            <Grid RowSpacing="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                               
+                                    <Image   Source="{Binding Image}"  WidthRequest="112"
+                                             Grid.Row="0" HeightRequest="72"
+                                    Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Center" 
+                                      />
+                                    <Label Text="{Binding Name}" TextColor="{StaticResource AccentColor}"
+                                           Grid.Row="1" FontSize="15" VerticalOptions="Start" HeightRequest="17"/>
+                                    <Label Text="{Binding Price,StringFormat='{0:C}'}" TextColor="{StaticResource Black}"
+                                           Grid.Row="1" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
+                                    <Button CornerRadius="10" WidthRequest="115" HeightRequest="31"  
+                                         Text="ORDER" FontSize="10" VerticalOptions="Start" HorizontalOptions="StartAndExpand"
+                                         BackgroundColor="{StaticResource AccentColor}"   Margin="0,-20,0,0"
+                                         TextColor="{StaticResource Black}" Grid.Row="2" />
+
+                            </Grid>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </StackLayout>
+
+
+
+
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

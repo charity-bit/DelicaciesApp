@@ -1,0 +1,15 @@
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\bin\Debug\netstandard2.0\Delicacies.deps.json
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\bin\Debug\netstandard2.0\Delicacies.dll
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\Delicacies.AssemblyInfoInputs.cache
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\Delicacies.AssemblyInfo.cs
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\bin\Debug\netstandard2.0\ref\Delicacies.dll
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\bin\Debug\netstandard2.0\Delicacies.pdb
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\view\MenuPage.xaml.g.cs
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\Delicacies.csproj.CoreCompileInputs.cache
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\Delicacies.dll
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\ref\Delicacies.dll
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\Delicacies.pdb
+C:\Users\charitynyanchera\source\repos\Delicacies\Delicacies\Delicacies\obj\Debug\netstandard2.0\Delicacies.csprojAssemblyReference.cache
