@@ -1,5 +1,4 @@
-*.cpp linguist-detectable=false
-*.cs linguist-detectable=true
-*.java linguist-detectable=true
+*.java linguist-detectable=false
 
 *.cs text diff=csharp
+.xaml.cs text diff=Xamarin
