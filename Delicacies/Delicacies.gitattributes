@@ -1,2 +1,4 @@
 *.cpp linguist-detectable=false
 *.cs linguist-detectable=true
+*.java linguist-detectable=true
+
