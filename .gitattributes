@@ -2,4 +2,8 @@
 *.cs linguist-language=c#
 
 *.cs text diff=c#
-.xaml.cs text diff=Xamarin
+* linguist-vendored
+*.cs linguist-vendored=false
+
+
+
