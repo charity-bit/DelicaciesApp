@@ -1,4 +1,4 @@
 *.java linguist-detectable=false
-
-*.cs text diff=csharp
+*.cs linguist-language=c#
+*.cs text diff=c#
 .xaml.cs text diff=Xamarin
