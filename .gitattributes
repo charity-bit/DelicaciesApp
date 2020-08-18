@@ -1,4 +1,4 @@
-*.java linguist-vendored=false
+*.java linguist-detectable=false
 *.cs linguist-language=c#
 
 *.cs text diff=c#
