@@ -1,4 +1,6 @@
-*.java linguist-detectable=false
+*.java linguist-vendored=false
 *.cs linguist-language=c#
+*.AssemblyInfo.cs linguist-vendored=false
+
 *.cs text diff=c#
 .xaml.cs text diff=Xamarin
